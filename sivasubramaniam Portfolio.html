@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sivasubramaniam Portfolio</title>
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #0d0d0d;
+        color: #fff;
+    }
+    header {
+        height: 100vh;
+        background: url('profile.png') center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 80px;
+        background-attachment: scroll;
+        position: relative;
+    }
+    header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(176, 11, 11, 0.6);
+    }
+    .hero-text {
+        position:relative;
+        z-index: 2;
+        max-width: 500px;
+    }
+    .hero-text h1 {
+        font-size: 52px;
+        margin: 0;
+    }
+    .hero-text p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .section {
+        padding: 70px;
+    }
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #00d16f;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .gallery img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+        transition: transform .3s;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+/* Reduced spacing */
+.section { padding: 40px 40px; }
+header { padding-left:40px; }
+.gallery img { margin-bottom:10px; }
+
+/* Light + Dark mixed theme */
+body {
+  background: linear-gradient(120deg, #0d0d0d 50%, #1f1f1f 50%);
+}
+.section, header::after { background: rgba(0,0,0,0.5); }
+
+/* Project cards */
+.project-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:20px;
+}
+.project-card {
+  background:#1a1a1a;
+  border-radius:12px;
+  padding:20px;
+  transition:transform .3s, box-shadow .3s;
+  border:1px solid #333;
+}
+.project-card:hover {
+  transform:translateY(-8px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+.download-btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 20px;
+  background:#00d16f;
+  border-radius:8px;
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+}
+.gallery a img:hover { transform: scale(1.08); box-shadow:0 8px 20px rgba(0,0,0,0.6);} 
+</style>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav style="position:fixed;top:0;left:0;width:100%;background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:15px 40px;display:flex;justify-content:space-between;align-items:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.15);box-shadow:0 4px 20px rgba(0,0,0,0.3)">
+  <h2 style="margin:0;color:#00d16f;font-size:22px;cursor:pointer;" onclick="window.scrollTo({top:0,behavior:'smooth'})">Portfolio</h2>
+  <div style="display:flex;gap:25px;align-items:center;">
+    <a href="#about" style="color:white;text-decoration:none;font-size:16px;">About</a>
+    <a href="#experience" style="color:white;text-decoration:none;font-size:16px;">Experience</a>
+    <a href="#projects" style="color:white;text-decoration:none;font-size:16px;">Projects</a>
+    <a href="#skills" style="color:white;text-decoration:none;font-size:16px;">Skills</a>
+    <a href="/mnt/data/Sivasubramaniam  DM resume.pdf" download style="padding:8px 15px;background:#00d16f;color:#000;text-decoration:none;border-radius:6px;font-weight:bold;">Resume</a>
+  </div>
+</nav>
+
+
+
+<body style="padding-top:80px;"> 
+<script>
+function animateSections() {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((sec, index) => {
+    setTimeout(() => sec.classList.add('fade-in'), index * 200);
+  });
+}
+</script>
+
+<header>
+    <div class="hero-text">
+        <h1>Sivasubramaniam N</h1>
+        <p>Digital Marketing Professional | Ads Specialist | Branding & Creative Strategy</p>
+    </div>
+</header>
+
+<section class="section" id="about">
+    <h2>About Me</h2>
+    <p>Passionate Digital Marketing professional with hands-on experience in ad campaigns, content creation, analytics, and brand management. Skilled in crafting data-driven and creative strategies that drive engagement, enhance brand visibility, and deliver measurable growth. Experienced in optimizing campaigns across multiple channels, analyzing performance metrics, and building impactful marketing initiatives that connect with target audiences.</p>
+
+</section>
+<section class="section" id="experience">
+    <h2>Experience</h2>
+<p style="font-size:18px;color:#ccc;">Digital Marketing professional with 2.5 years of experience in planning and executing ad campaigns, content creation, social media management, and brand-building initiatives.</p></h2>
+<div class="gallery">
+    <div>
+        <h3>Freelance Social Media Marketer (2025 – Present)</h3>
+        <p>Designed visually engaging graphics and implemented comprehensive digital marketing strategies for Sai Vintage Collections, resulting in a 15% increase in audience engagement. Developed content and campaigns that strengthened brand identity, expanded online reach, and enhanced overall brand visibility, while leveraging data-driven insights to optimize performance and drive measurable growth.</p>
+    </div>
+    <div>
+        <h3>Digital Marketing & Branding Junior Executive – Renaatus Procon (2024–2025)</h3>
+        <p>Planned and executed hyper-local digital ad campaigns, achieving a 25% boost in brand visibility and a 40% increase in audience reach. Enhanced engagement by 15% through targeted content strategies and interactive campaigns. Additionally, designed and developed corporate branding materials to strengthen brand identity, ensuring consistent messaging across all marketing channels while leveraging analytics to optimize performance and drive measurable results</p>
+    </div>
+    <div>
+        <h3>Social Media & Branding In-charge – Sri Eshwar College (2023–2024)</h3>
+        <p>Managed and enhanced the social media presence of the institution by creating engaging content, poster designs, and promotional materials that resonated with students and staff. Successfully organized and coordinated cultural events with over 1,000+ attendees, overseeing event planning, marketing, and execution to ensure high participation and memorable experiences. Combined creative content strategies with effective outreach to strengthen the institution’s brand image and community engagement.</p>
+    </div>
+</div>
+</section>
+<section class="section" id="projects">
+<h2>Creative Work</h2>
+<p>Below are sample creative works. Click to view full versions on Google Drive.</p>
+<div class="gallery">
+    <a href="https://drive.google.com/drive/folders/1khks8FrqABS_JLbHt_61bFdlLHMfbjfT" target="_blank">
+        <img src="moringa.jpg" alt="Moringa Powder Design" />
+    </a>
+    <a href="https://drive.google.com/drive/folders/1khks8FrqABS_JLbHt_61bFdlLHMfbjfT" target="_blank">
+        <img src="SECE.png" alt="SECE" />
+    </a>
+    <a href="https://drive.google.com/drive/folders/1khks8FrqABS_JLbHt_61bFdlLHMfbjfT" target="_blank">
+        <img src="event poster.png" alt="Event post" />
+    </a>
+</div>
+</section>
+
+<section class="section">
+    <h2>Ad Performance & Analytics</h2>
+<div class="gallery">
+        <img src="meta1.jpg" alt="Meta Ads Performance 1" />
+        <img src="fb.jpg" alt="Facebook Overview" />
+        <img src="insta.jpg" alt="Instagram Overview" />
+</div>
+</section>
+<section class="section">
+<h2>Projects</h2>
+<div class="project-grid">
+  <div class="project-card">
+    <h3>Brand Campaigns</h3>
+    <p>Hyper-local ads executed for Renaatus Procon with +40% reach improvement.</p>
+    <a href="https://drive.google.com/drive/folders/1MecZplOf21znmkGdkzFYi138CoU7oMFY?usp=drive_link" target="_blank" style="color:#00d16f;">View Samples</a>
+  </div>
+  <div class="project-card">
+    <h3>Creative Designs</h3>
+    <p>Product creatives, festive posts, rebranding assets, and promotional visuals.</p>
+    <a href="https://drive.google.com/drive/folders/1oUSK98RxO0f4vlKVpHKHBGLpQDac0P_Q?usp=drive_link" target="_blank" style="color:#00d16f;">View Designs</a>
+  </div>
+  <div class="project-card">
+    <h3>Content & Scripts</h3>
+    <p>Video scripts, blogs, and marketing content for educational & corporate brands.</p>
+    <a href="https://drive.google.com/drive/folders/1-U6RNdUUQvmxbhd2hvBXdG5Ozq5jrnhQ?usp=drive_link" target="_blank" style="color:#00d16f;">View Content</a>
+  </div>
+</div>
+
+<h2 id="skills">Skills</h2>
+
+<!-- Animated Skill Bars -->
+<div style="max-width:600px;">
+  <p>Digital Marketing</p>
+  <div style="background:#333;border-radius:10px;height:12px;overflow:hidden;">
+    <div style="width:90%;height:12px;background:#00d16f;animation:grow1 2s forwards;"></div>
+  </div>
+
+  <p>Meta & Google Ads</p>
+  <div style="background:#333;border-radius:10px;height:12px;overflow:hidden;">
+    <div style="width:85%;height:12px;background:#00d16f;animation:grow2 2s forwards;"></div>
+  </div>
+
+  <p>Branding & Design</p>
+  <div style="background:#333;border-radius:10px;height:12px;overflow:hidden;">
+    <div style="width:80%;height:12px;background:#00d16f;animation:grow3 2s forwards;"></div>
+  </div>
+
+  <p>SEO Optimization</p>
+  <div style="background:#333;border-radius:10px;height:12px;overflow:hidden;">
+    <div style="width:75%;height:12px;background:#00d16f;animation:grow4 2s forwards;"></div>
+  </div>
+</div>
+
+<style>
+@keyframes grow1 { from{width:0;} to{width:90%;} }
+@keyframes grow2 { from{width:0;} to{width:85%;} }
+@keyframes grow3 { from{width:0;} to{width:80%;} }
+@keyframes grow4 { from{width:0;} to{width:75%;} }
+</style>
+
+<h2>Professional Skills</h2>
+<ul>
+    <li>Digital Marketing Tools: Google Ads, Meta Suite, Mailchimp</li>
+    <li>Design Tools: Canva, Figma, Illustrator, Premiere Pro</li>
+    <li>SEO Optimization & Analytics</li>
+    <li>Content Creation & Branding</li>
+    <li>Event Management & Communication</li>
+</ul>
+</section>
+<section class="section">
+<h2>Achievements</h2>
+<ul>
+    <li>Boosted brand visibility by 25% through strategically planned and targeted digital marketing campaigns across multiple platforms.</li>
+    <li>Increased campaign reach by 40% and engagement by 15% by creating compelling content, optimizing ad performance, and leveraging audience insights for maximum impact.</li>
+    <li>Successfully organized and managed a cultural event with over 1,000 participants, overseeing event planning, promotion, logistics, and on-ground coordination to ensure seamless execution and high attendee engagement.</li>
+</ul>
+</section>
+<section class="section">
+<h2>Certifications</h2>
+<ul>
+    <li>Social Media Marketing – HubSpot</li>
+    <li>LinkedIn Marketing – Udemy</li>
+    <li>SEO – Great Learning</li>
+    <li>Content Marketing – Great Learning</li>
+    <li>WhatsApp Marketing – Wati Academy</li>
+    <li>Excel – Coursera</li>
+</ul>
+</section>
+
+
+<footer style="background:#111;padding:40px;text-align:center;margin-top:40px;border-top:1px solid #333;">
+  <p style="color:#888;">Connect with me</p>
+  <div style="display:flex;justify-content:center;gap:30px;font-size:30px;">
+    <!-- LinkedIn Icon -->
+    <a href="https://www.linkedin.com/in/sivasubramaniam-n-651721241" target="_blank" style="color:#00d16f;">
+      <i class="fab fa-linkedin"></i>
+    </a>
+
+    <!-- Email Icon -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sivanatarajan02@gmail.com" target="_blank" style="color:#00d16f;">
+      <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- Resume / Drive Icon -->
+    <a href="https://drive.google.com/drive/folders/1khks8FrqABS_JLbHt_61bFdlLHMfbjfT" target="_blank" style="color:#00d16f;">
+      <i class="fas fa-file-alt"></i>
+     <!-- phone / Drive Icon -->  
+      <a href="tel:+919787035030" style="color:#00d16f;">
+        <i class="fas fa-phone"></i>
+    </a>
+  </div>
+</footer>
